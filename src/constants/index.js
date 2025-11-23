@@ -22,6 +22,9 @@ import {
   carrent,
   jobit,
   tripguide,
+  webvengers,
+  pinpuntod,
+  vanitydept,
   threejs,
 } from "../assets";
 
@@ -54,7 +57,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Mobile App Developer",
     icon: creator,
   },
 ];
@@ -198,58 +201,58 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Pin Puntod",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "This project features a web and mobile grave locator specifically for Heroes' Cemetery (Libingan ng mga Bayani - LNMB PH), utilizing GPS and Google Maps. Designed to be user-friendly, it helps users easily find and navigate to gravesites. The tool provides a comprehensive database, making it an invaluable resource for personal visits and genealogical research.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "laravel",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "kotlin",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: pinpuntod,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Vanity Dept.",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Vanity Dept. is an eCommerce website that specializes in trendy clothing accessories, including jewelry and stylish bags. With a user-friendly design and secure payment options, it empowers customers to easily find and express their unique style through high-quality products.",
     tags: [
       {
-        name: "react",
+        name: "eCommerce management",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "API Integration",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Payment Gateways",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: vanitydept,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "WEBVengers",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
+      "A web-based platform offering outsourced software development services through a dedicated team of skilled professionals. We provide tailored solutions that empower businesses to thrive in a competitive market. Committed to excellence, we leverage the latest technologies to deliver innovative and scalable software solutions that drive client success.",
+      tags: [
       {
-        name: "nextjs",
+        name: "threejs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "bootstrap",
         color: "green-text-gradient",
       },
       {
@@ -257,8 +260,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: webvengers,
+    source_code_link: "https://www.linkedin.com/in/aldrinjohndeguzman/details/projects/1754119282295/single-media-viewer/?profileId=ACoAADM-k5QBSgwa64zWAf2mFAQJepkA7jyCxkE",
   },
 ];
 
