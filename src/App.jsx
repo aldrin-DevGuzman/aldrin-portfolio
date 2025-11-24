@@ -2,6 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
 import Resume from "./components/Resume";
+import BackToTop from "./components/BackToTop";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Contact />
           <StarsCanvas />
         </div>
+        <BackToTop />
       </div>
     </BrowserRouter>
   );
