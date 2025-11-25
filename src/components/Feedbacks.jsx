@@ -49,7 +49,7 @@ const Feedbacks = () => {
       <div className={`${styles.padding} min-h-[300px]`} style={{ background: 'transparent' }}>
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>Moments to remember</p>
-          <h2 className={styles.sectionHeadText}>Wins.</h2>
+          <h2 className={styles.sectionHeadText}><span className='accent-text'>Wins.</span></h2>
         </motion.div>
       </div>
       <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>

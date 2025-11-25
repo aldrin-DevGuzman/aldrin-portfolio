@@ -25,7 +25,7 @@
 
 .light {
   --bg: #ffffff;
-  --surface: #ffffff; /* brighter surface */
+  --surface: #fffdfda8; /* brighter surface */
   --surface-border: #ececec; /* subtler, lighter border */
   --text: #0b0b0b;
   --muted: #6b6b6b;
@@ -101,7 +101,7 @@ body {
 /* Add border where components expect contrast */
 .light .rounded-2xl,
 .light .rounded-xl,
-.light .rounded-[20px],
+.light .rounded-\[20px\],
 .light .card-img_hover {
   border: 1px solid var(--surface-border) !important;
 }
@@ -115,7 +115,7 @@ body {
 /* Make rounded containers slightly lifted but subtle in light mode */
 .light .rounded-2xl,
 .light .rounded-xl,
-.light .rounded-[20px] {
+.light .rounded-\[20px\] {
   box-shadow: 0 10px 24px -12px rgba(16,13,37,0.04) !important;
 }
 

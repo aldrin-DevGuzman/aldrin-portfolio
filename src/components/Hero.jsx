@@ -11,7 +11,7 @@ const Hero = () => {
       >
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full accent-bg' />
-          <div className='w-1 sm:h-80 h-40 accent-bg' />
+          <div className='w-1 sm:h-80 h-40 bg-gradient-to-b from-[#ffb86b] via-[#ff9a3c] to-[#e97a1204]' />
         </div>
 
         <div>
