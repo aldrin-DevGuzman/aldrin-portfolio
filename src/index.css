@@ -19,7 +19,7 @@
   --text: #000000;
   --muted: #6b6b6b;
   /* lighter orange accents */
-  --accent: #ff8a3b;
+  --accent: #f79553;
   --accent-2: #ffc28a;
 }
 
@@ -104,6 +104,13 @@ body {
 .light .rounded-\[20px\],
 .light .card-img_hover {
   border: 1px solid var(--surface-border) !important;
+}
+
+/* Ensure service cards keep accent border in light mode for consistency */
+.light .service-card-inner { border: none !important; }
+.light .service-card-frame.green-pink-gradient {
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%) !important;
+  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%) !important;
 }
 
 /* Also ensure any element that had a shadow-card background uses surface */
@@ -260,7 +267,7 @@ body {
 
 .hash-span {
   margin-top: -100px;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
   display: block;
 }
 

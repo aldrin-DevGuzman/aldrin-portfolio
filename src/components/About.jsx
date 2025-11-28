@@ -7,7 +7,7 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
+const ServiceCard = ({ index, title, icon, onClick }) => (
   <Tilt
     className='xs:w-[250px] w-full'
     options={{
@@ -18,13 +18,16 @@ const ServiceCard = ({ index, title, icon }) => (
   >
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+      className='w-full green-pink-gradient service-card-frame p-[1px] rounded-[20px] shadow-card'
+      onClick={onClick}
     >
-      <div className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
-        <img
+      <div className='bg-tertiary rounded-[20px] service-card-inner py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
+        <motion.img
           src={icon}
-          alt='web-development'
+          alt='service-icon'
           className='w-16 h-16 object-contain'
+          animate={{ rotate: index % 2 === 0 ? 360 : -360 }}
+          transition={{ duration: 16, repeat: Infinity, repeatType: 'reverse', ease: 'backInOut' }}
         />
 
         <h3 className='accent text-[20px] font-bold text-center'>
@@ -35,7 +38,7 @@ const ServiceCard = ({ index, title, icon }) => (
   </Tilt>
 );
 
-const About = () => {
+const About = ({ onServiceClick }) => {
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -57,7 +60,12 @@ const About = () => {
 
       <div className='mt-20 flex flex-wrap gap-10 items-center justify-center'>
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+          <ServiceCard
+            key={service.title}
+            index={index}
+            {...service}
+            onClick={() => onServiceClick && onServiceClick(service.title)}
+          />
         ))}
       </div>
     </>
