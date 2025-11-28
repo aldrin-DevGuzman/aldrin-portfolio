@@ -21,6 +21,7 @@ import {
   webvengers,
   pinpuntod,
   vanitydept,
+  bike,
   threejs,
   lit,
   tps,
@@ -193,9 +194,10 @@ const projects = [
     name: "Pin Puntod",
     description:
       "This project features a web and mobile grave locator specifically for Heroes' Cemetery (Libingan ng mga Bayani - LNMB PH), utilizing GPS and Google Maps. Designed to be user-friendly, it helps users easily find and navigate to gravesites. The tool provides a comprehensive database, making it an invaluable resource for personal visits and genealogical research.",
+    categories: ["web", "mobile"],
     tags: [
       {
-        name: "react",
+        name: "react native",
         color: "blue-text-gradient",
       },
       {
@@ -222,6 +224,7 @@ const projects = [
     name: "Vanity Dept.",
     description:
       "Vanity Dept. is an eCommerce website that specializes in trendy clothing accessories, including jewelry and stylish bags. With a user-friendly design and secure payment options, it empowers customers to easily find and express their unique style through high-quality products.",
+    categories: ["web"],
     tags: [
       {
         name: "eCommerce management",
@@ -244,6 +247,7 @@ const projects = [
     name: "WEBVengers",
     description:
       "A web-based platform offering outsourced software development services through a dedicated team of skilled professionals. We provide tailored solutions that empower businesses to thrive in a competitive market. Committed to excellence, we leverage the latest technologies to deliver innovative and scalable software solutions that drive client success.",
+      categories: ["web"],
       tags: [
       {
         name: "threejs",
@@ -262,6 +266,50 @@ const projects = [
     images: [webvengers],
     source_code_link: "https://www.linkedin.com/in/aldrinjohndeguzman/details/projects/1754119282295/single-media-viewer/?profileId=ACoAADM-k5QBSgwa64zWAf2mFAQJepkA7jyCxkE",
   },
+  {
+    name: "Bike Weather App",
+    description:
+      "A native iOS app designed for cycling enthusiasts, enhancing the riding experience with accurate and timely weather forecasts. Plan your rides with real-time updates on temperature, precipitation, wind speed, and sunshine hours.",
+      categories: ["mobile"],
+      tags: [
+      {
+        name: "swift",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "xcode",
+        color: "green-text-gradient",
+      },
+      {
+        name: "core location",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: bike,
+    images: [bike],
+  },
+  // {
+  //   name: "Poker Game App",
+  //   description:
+  //     "A web-based platform offering outsourced software development services through a dedicated team of skilled professionals. We provide tailored solutions that empower businesses to thrive in a competitive market. Committed to excellence, we leverage the latest technologies to deliver innovative and scalable software solutions that drive client success.",
+  //     categories: ["mobile"],
+  //     tags: [
+  //     {
+  //       name: "threejs",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "bootstrap",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "css",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   // image: webvengers,
+  //   // images: [webvengers],
+  // },
 ];
 
 export { services, technologies, experiences, achievements, projects };

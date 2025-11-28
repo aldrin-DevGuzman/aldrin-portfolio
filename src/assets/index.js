@@ -37,6 +37,7 @@ import vanitydept from "./vanitydept.png";
 import ticap17 from "./ticap17.jpg";
 import tps from "./tps.jpg";
 import lit from "./lit.png";
+import bike from "./bike.png"
 
 export {
   logo,
@@ -72,6 +73,7 @@ export {
   webvengers,
   pinpuntod,
   vanitydept,
+  bike,
   lit,
   ticap17,
   tps,

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const ProjectModal = ({ project, isOpen, onClose }) => {
+const ProjectModal = ({ project, projects, title, isOpen, onClose }) => {
   const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [activeProject, setActiveProject] = useState(null);
 
   useEffect(() => {
     if (isOpen) {
@@ -19,21 +20,22 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     };
   }, [isOpen]);
 
-  if (!project) return null;
+  const projectToShow = project || activeProject;
+  const inListMode = Array.isArray(projects) && projects.length > 0 && !projectToShow;
+  if (!inListMode && !projectToShow) return null;
 
-  // Combine images and videos into a single media array
-  const media = [
-    ...(project.images || []).map(img => ({ type: 'image', url: img })),
-    ...(project.videos || []).map(video => ({ 
+  const media = projectToShow ? [
+    ...(projectToShow.images || []).map(img => ({ type: 'image', url: img })),
+    ...(projectToShow.videos || []).map(video => ({ 
       type: 'video', 
       url: video.embedUrl || video.url,
       originalUrl: video.url 
     }))
-  ];
+  ] : [];
   
   // Add fallback single image if no media exists
-  if (media.length === 0 && project.image) {
-    media.push({ type: 'image', url: project.image });
+  if (projectToShow && media.length === 0 && projectToShow.image) {
+    media.push({ type: 'image', url: projectToShow.image });
   }
 
   const currentMedia = media[currentMediaIndex];
@@ -54,7 +56,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -63,7 +64,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
           />
 
-          {/* Modal */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -80,7 +80,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               className="surface-card rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close button */}
               <div className="sticky top-0 flex justify-end p-4 bg-inherit border-b border-surface-border z-10">
                 <button
                   onClick={onClose}
@@ -90,16 +89,51 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </button>
               </div>
 
-              {/* Modal content */}
               <div className="flex flex-col gap-6 p-8">
-                {/* Media carousel */}
+                {inListMode ? (
+                  <>
+                    <div>
+                      <h2 className="text-3xl font-bold text-text mb-4">
+                        {title || "Projects"}
+                      </h2>
+                      <p className="text-secondary text-sm">Select a project to view details.</p>
+                    </div>
+                    <div className="mt-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 justify-center">
+                      {projects.map((p, idx) => (
+                        <motion.button
+                          key={`${p.name}-${idx}`}
+                          onClick={() => {
+                            setActiveProject(p);
+                            setCurrentMediaIndex(0);
+                            setIsVideoPlaying(false);
+                          }}
+                          className="text-left rounded-xl overflow-hidden border border-surface-border hover:shadow-card transition"
+                          whileHover={{ scale: 1.02 }}
+                        >
+                          <div className="w-full h-40 bg-gray-800">
+                            <img src={p.image} alt={p.name} className="w-full h-full object-cover" />
+                          </div>
+                          <div className="p-4">
+                            <h3 className="font-semibold text-text">{p.name}</h3>
+                            <div className="mt-2 flex flex-wrap gap-2">
+                              {p.tags?.slice(0,3).map(tag => (
+                                <span key={`${p.name}-${tag.name}`} className={`px-2 py-1 rounded-full text-xs ${tag.color}`}>{tag.name}</span>
+                              ))}
+                            </div>
+                          </div>
+                        </motion.button>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                <>
                 <div className="flex flex-col gap-4">
                   <div className="relative w-full h-[500px] rounded-2xl overflow-hidden bg-gray-800">
                     {currentMedia.type === 'image' ? (
                       <motion.img
                         key={currentMediaIndex}
                         src={currentMedia.url}
-                        alt={`${project.name} - slide ${currentMediaIndex + 1}`}
+                        alt={`${projectToShow.name} - slide ${currentMediaIndex + 1}`}
                         className="w-full h-full object-contain"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -113,12 +147,10 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                           frameBorder="0"
                           allow="autoplay; encrypted-media"
                           allowFullScreen
-                          title={`${project.name} video`}
+                          title={`${projectToShow.name} video`}
                         />
                       </div>
                     )}
-                    
-                    {/* Media counter badge */}
                     {media.length > 1 && (
                       <div className="absolute top-4 right-4 bg-black bg-opacity-60 px-3 py-1 rounded-lg text-white text-sm font-medium">
                         {currentMediaIndex + 1} / {media.length}
@@ -129,7 +161,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     )}
                   </div>
 
-                  {/* Thumbnail carousel */}
                   {media.length > 1 && (
                     <div className="flex gap-3 overflow-x-auto pb-2">
                       {media.map((item, index) => (
@@ -164,7 +195,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                   )}
 
-                  {/* Navigation buttons */}
                   {media.length > 1 && (
                     <div className="flex gap-3 justify-center">
                       <motion.button
@@ -187,37 +217,35 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   )}
                 </div>
 
-                {/* Description side pane */}
                 <div className="flex flex-col justify-between">
                   <div>
                     <h2 className="text-3xl font-bold text-text mb-4">
-                      {project.name}
+                      {projectToShow.name}
                     </h2>
 
                     <p className="text-secondary text-base leading-relaxed mb-6">
-                      {project.description}
+                      {projectToShow.description}
                     </p>
 
-                    {project.longDescription && (
+                    {projectToShow.longDescription && (
                       <div className="mb-6 p-4 rounded-lg bg-black bg-opacity-20">
                         <h3 className="text-lg font-semibold text-text mb-2">
                           Project Details
                         </h3>
                         <p className="text-secondary text-sm leading-relaxed">
-                          {project.longDescription}
+                          {projectToShow.longDescription}
                         </p>
                       </div>
                     )}
 
-                    {/* Tags */}
                     <div className="mb-6">
                       <h3 className="text-sm font-semibold text-text mb-3">
                         Technologies
                       </h3>
                       <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag) => (
+                        {projectToShow.tags.map((tag) => (
                           <span
-                            key={`${project.name}-${tag.name}`}
+                            key={`${projectToShow.name}-${tag.name}`}
                             className={`px-3 py-1 rounded-full text-xs font-medium ${tag.color}`}
                           >
                             {tag.name}
@@ -227,10 +255,9 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
                   </div>
 
-                  {/* Action buttons */}
-                  {project.live_demo_link && (
+                  {projectToShow.live_demo_link && (
                     <a
-                      href={project.live_demo_link}
+                      href={projectToShow.live_demo_link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-6 py-3 rounded-lg bg-accent text-white font-medium text-center hover:opacity-80 transition"
@@ -238,7 +265,17 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       View Live Demo
                     </a>
                   )}
+                  {inListMode && (
+                    <button
+                      onClick={() => setActiveProject(null)}
+                      className="mt-4 px-6 py-3 rounded-lg border border-surface-border text-text hover:opacity-80 transition"
+                    >
+                      Back to list
+                    </button>
+                  )}
                 </div>
+                </>
+                )}
               </div>
             </div>
           </motion.div>
