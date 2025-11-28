@@ -44,14 +44,14 @@ const services = [
     title: "Web Developer",
     icon: web,
   },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
+  // {
+  //   title: "React Native Developer",
+  //   icon: mobile,
+  // },
+  // {
+  //   title: "Backend Developer",
+  //   icon: backend,
+  // },
   {
     title: "Mobile App Developer",
     icon: creator,
@@ -155,30 +155,30 @@ const experiences = [
   },
 ];
 
-const testimonials = [
+const achievements = [
   {
-    testimonial:
-      "Consistent Ranked Top Performing Student - Recognized for maintaining high academic performance throughout the program.",
-    name: "Annual Student Recognitions",
-    designation: "Tams",
-    company: "Far Eastern University",
-    //image: "https://randomuser.me/api/portraits/women/4.jpg",
+    achievement:
+      "Recognized for maintaining high academic performance throughout the program.",
+    name: "Student Recognitions",
+    event: "Tams",
+    school: "Far Eastern University",
+    image: "/src/assets/tps.jpg",
   },
   {
-    testimonial:
+    achievement:
       "Awarded for the Best Capstone Project and Best Website, highlighting effective solutions and engaging web designs.",
     name: "Awards Night",
-    designation: "TiCap 17",
-    company: "FEU",
-    //image: "https://randomuser.me/api/portraits/men/5.jpg",
+    event: "TiCap 17",
+    school: "FEU",
+    image: "/src/assets/ticap17.jpg",
   },
   {
-    testimonial:
-      "Best Director for Animation Short Film - Honored as Best Director for an animated short film.",
+    achievement:
+      "Best Director for Animated Short Film - Honored as Best Director for short film literature.",
     name: "Awarding Ceremony",
-    designation: "21st Literacy Festival",
-    company: "St. Clare College of Caloocan",
-    //image: "https://randomuser.me/api/portraits/women/6.jpg",
+    event: "21st Literature Festival",
+    school: "St. Clare College of Caloocan",
+    image: "/src/assets/LIT.png",
   },
 ];
 
@@ -258,4 +258,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, achievements, projects };

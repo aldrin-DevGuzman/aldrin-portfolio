@@ -60,7 +60,7 @@ const Resume = () => {
           <h3 className="font-semibold">Projects & Highlights</h3>
           <ul className="mt-3 list-disc list-inside text-sm text-secondary">
             <li>Pin Puntod — Web & Mobile Grave Locator with GPS and Google Maps (Thesis)</li>
-            <li>Paraverse — University portfolio / profile (link placeholder)</li>
+            <li>Paraverse — University portfolio / profile</li>
             <li>Capstone — Full-stack implementation with responsive UI</li>
           </ul>
         </section>

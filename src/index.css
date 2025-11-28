@@ -16,7 +16,7 @@
 /* Theme variables: default styles are provided via the `.light` and `.dark` classes on <html> */
 :root {
   --bg: #ffffff;
-  --text: #0b0b0b;
+  --text: #000000;
   --muted: #6b6b6b;
   /* lighter orange accents */
   --accent: #ff8a3b;
@@ -27,7 +27,7 @@
   --bg: #ffffff;
   --surface: #f7f7f7; /* brighter surface */
   --surface-border: #5f5f5f52; /* subtler, lighter border */
-  --text: #0b0b0b;
+  --text: #242424;
   --muted: #6b6b6b;
   --accent: #ff8a3b; /* lighter orange */
   --accent-2: #ffc28a;

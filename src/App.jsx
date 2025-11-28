@@ -2,7 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import { useState } from "react";
 import { createPortal } from "react-dom";
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, ProjectModal } from "./components";
+import { About, Contact, Experience, Wins, Hero, Navbar, Tech, Works, StarsCanvas, ProjectModal } from "./components";
 import Resume from "./components/Resume";
 import BackToTop from "./components/BackToTop";
 
@@ -25,7 +25,7 @@ const App = () => {
         <Experience />
         <Tech />
         <Works onProjectClick={handleProjectClick} />
-        <Feedbacks />
+        <Wins />
         <Resume />
         <div className='relative z-0'>
           <Contact />
