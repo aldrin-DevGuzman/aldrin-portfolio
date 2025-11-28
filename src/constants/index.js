@@ -22,6 +22,9 @@ import {
   pinpuntod,
   vanitydept,
   threejs,
+  lit,
+  tps,
+  ticap17,
 } from "../assets";
 
 export const navLinks = [
@@ -162,7 +165,8 @@ const achievements = [
     name: "Student Recognitions",
     event: "Tams",
     school: "Far Eastern University",
-    image: "/src/assets/tps.jpg",
+    //image: "/src/assets/tps.jpg",
+    image: tps,
   },
   {
     achievement:
@@ -170,7 +174,8 @@ const achievements = [
     name: "Awards Night",
     event: "TiCap 17",
     school: "FEU",
-    image: "/src/assets/ticap17.jpg",
+    //image: "/src/assets/ticap17.jpg",
+    image: ticap17,
   },
   {
     achievement:
@@ -178,7 +183,8 @@ const achievements = [
     name: "Awarding Ceremony",
     event: "21st Literature Festival",
     school: "St. Clare College of Caloocan",
-    image: "/src/assets/LIT.png",
+    //image: "/src/assets/LIT.png",
+    image: lit,
   },
 ];
 
