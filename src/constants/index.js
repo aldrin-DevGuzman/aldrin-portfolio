@@ -202,7 +202,15 @@ const projects = [
       },
     ],
     image: pinpuntod,
+    images: [pinpuntod],
     source_code_link: "https://github.com/",
+
+    videos: [
+      {
+        url: "https://drive.google.com/file/d/1U6ZqdO5JsRl-xZMsrn7te8HB_UhLwTxM/view",
+        embedUrl: "https://drive.google.com/file/d/1U6ZqdO5JsRl-xZMsrn7te8HB_UhLwTxM/preview"
+      }
+    ]
   },
   {
     name: "Vanity Dept.",
@@ -223,6 +231,7 @@ const projects = [
       },
     ],
     image: vanitydept,
+    images: [vanitydept],
     source_code_link: "https://github.com/",
   },
   {
@@ -244,6 +253,7 @@ const projects = [
       },
     ],
     image: webvengers,
+    images: [webvengers],
     source_code_link: "https://www.linkedin.com/in/aldrinjohndeguzman/details/projects/1754119282295/single-media-viewer/?profileId=ACoAADM-k5QBSgwa64zWAf2mFAQJepkA7jyCxkE",
   },
 ];
