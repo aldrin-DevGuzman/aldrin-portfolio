@@ -15,13 +15,12 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+  pinpuntodicon,
+  simplevia,
+  cyber,
+  webvengers,
+  pinpuntod,
+  vanitydept,
   threejs,
 } from "../assets";
 
@@ -45,16 +44,16 @@ const services = [
     title: "Web Developer",
     icon: web,
   },
+  // {
+  //   title: "React Native Developer",
+  //   icon: mobile,
+  // },
+  // {
+  //   title: "Backend Developer",
+  //   icon: backend,
+  // },
   {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
+    title: "Mobile App Developer",
     icon: creator,
   },
 ];
@@ -80,22 +79,22 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
+  // {
+  //   name: "Redux Toolkit",
+  //   icon: redux,
+  // },
   {
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
+  // {
+  //   name: "Node JS",
+  //   icon: nodejs,
+  // },
+  // {
+  //   name: "MongoDB",
+  //   icon: mongodb,
+  // },
   {
     name: "Three JS",
     icon: threejs,
@@ -116,140 +115,136 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Project Manager",
+    company_name: "iTECHs",
+    icon: pinpuntodicon,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "November 2023 - December 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Overseeing the development and maintenance of web and mobile applications while ensuring alignment with client needs.",
+      "Collaborating with cross-functional teams including the designer, product manager, and other developers to create high-quality product.",
+      "Guiding the implementation of responsive design and ensuring cross-browser compatibility to enhance user experience.",
+      "Code reviews and providing constructive feedback, while also managing client communications and requirements during the design scrum.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Frontend Developer",
+    company_name: "Simplevia Technologies Inc.",
+    icon: simplevia,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Dec 2024 - Mar 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining web applications using Laravel and Vue.js, ensuring an optimal user experience.",
+      "Collaborating with cross-functional teams, including designers and product managers, to create high-quality, intuitive products.",
+      "Implementing responsive design principles to ensure seamless performance across various devices and browsers.",
+      "Participating in code reviews and offering constructive feedback to team members while actively contributing to the development process.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Junior Software Engineer",
+    company_name: "Cybersoft Content Services, Inc.",
+    icon: cyber,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "May 2025 - Aug 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Assisting in the development and maintenance of web applications using Ruby on Rails and Tailwind CSS, focusing on responsive and visually appealing designs.",
+      "Collaborating with cross-functional teams to understand project requirements and contribute to the delivery of high-quality software solutions.",
+      "Implementing responsive design features to enhance user experience across different devices and ensure cross-browser compatibility.",
+      "Engaging in code reviews, providing constructive feedback, and participating in knowledge-sharing sessions to improve team performance and product quality.",
     ],
   },
 ];
 
-const testimonials = [
+const achievements = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    achievement:
+      "Recognized for maintaining high academic performance throughout the program.",
+    name: "Student Recognitions",
+    event: "Tams",
+    school: "Far Eastern University",
+    image: "/src/assets/tps.jpg",
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    achievement:
+      "Awarded for the Best Capstone Project and Best Website, highlighting effective solutions and engaging web designs.",
+    name: "Awards Night",
+    event: "TiCap 17",
+    school: "FEU",
+    image: "/src/assets/ticap17.jpg",
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    achievement:
+      "Best Director for Animated Short Film - Honored as Best Director for short film literature.",
+    name: "Awarding Ceremony",
+    event: "21st Literature Festival",
+    school: "St. Clare College of Caloocan",
+    image: "/src/assets/LIT.png",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Pin Puntod",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "This project features a web and mobile grave locator specifically for Heroes' Cemetery (Libingan ng mga Bayani - LNMB PH), utilizing GPS and Google Maps. Designed to be user-friendly, it helps users easily find and navigate to gravesites. The tool provides a comprehensive database, making it an invaluable resource for personal visits and genealogical research.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "laravel",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "kotlin",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: pinpuntod,
+    images: [pinpuntod],
     source_code_link: "https://github.com/",
+
+    videos: [
+      {
+        url: "https://drive.google.com/file/d/1U6ZqdO5JsRl-xZMsrn7te8HB_UhLwTxM/view",
+        embedUrl: "https://drive.google.com/file/d/1U6ZqdO5JsRl-xZMsrn7te8HB_UhLwTxM/preview"
+      }
+    ]
   },
   {
-    name: "Job IT",
+    name: "Vanity Dept.",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Vanity Dept. is an eCommerce website that specializes in trendy clothing accessories, including jewelry and stylish bags. With a user-friendly design and secure payment options, it empowers customers to easily find and express their unique style through high-quality products.",
     tags: [
       {
-        name: "react",
+        name: "eCommerce management",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "API Integration",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Payment Gateways",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: vanitydept,
+    images: [vanitydept],
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "WEBVengers",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
+      "A web-based platform offering outsourced software development services through a dedicated team of skilled professionals. We provide tailored solutions that empower businesses to thrive in a competitive market. Committed to excellence, we leverage the latest technologies to deliver innovative and scalable software solutions that drive client success.",
+      tags: [
       {
-        name: "nextjs",
+        name: "threejs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "bootstrap",
         color: "green-text-gradient",
       },
       {
@@ -257,9 +252,10 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: webvengers,
+    images: [webvengers],
+    source_code_link: "https://www.linkedin.com/in/aldrinjohndeguzman/details/projects/1754119282295/single-media-viewer/?profileId=ACoAADM-k5QBSgwa64zWAf2mFAQJepkA7jyCxkE",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, achievements, projects };

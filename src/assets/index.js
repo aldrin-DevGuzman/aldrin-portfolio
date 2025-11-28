@@ -23,12 +23,17 @@ import threejs from "./tech/threejs.svg";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
+import pinpuntodicon from "./company/pinpuntod.png";
+import simplevia from "./company/simplevia.png";
+import cyber from "./company/cyber.png";
 import tesla from "./company/tesla.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import webvengers from "./webvengers.png";
+import pinpuntod from "./pinpuntod.png";
+import vanitydept from "./vanitydept.png";
 
 export {
   logo,
@@ -54,9 +59,14 @@ export {
   threejs,
   meta,
   shopify,
-  starbucks,
+  pinpuntodicon,
+  simplevia,
+  cyber,
   tesla,
   carrent,
   jobit,
   tripguide,
+  webvengers,
+  pinpuntod,
+  vanitydept,
 };
